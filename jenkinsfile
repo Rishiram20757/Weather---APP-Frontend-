@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    stages {
+        stage('Clone Repo') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Rishiram20757/Weather---APP-Frontend-'
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Building the frontend app...'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying frontend...'
+            }
+        }
+    }
+}
